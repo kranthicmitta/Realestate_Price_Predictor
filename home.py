@@ -36,17 +36,6 @@ st.set_page_config(page_title="Real estate price predictor",
 @st.cache_data # Add cache data decorator
 
 
-""""
-############### Load and Use local style.css file ###############
-def local_css(file_name):
-    """
-    Use a local style.css file.
-    """
-    with open(file_name) as f:
-        st.write(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-# load css file
-local_css("./style/style.css")
-""""
 
 
 ############### Load data ###############
