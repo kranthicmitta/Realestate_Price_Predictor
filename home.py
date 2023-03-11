@@ -36,24 +36,14 @@ st.set_page_config(page_title="Real estate price predictor",
 @st.cache_data # Add cache data decorator
 
 
-
-
-############### Load data ###############
-def load_data(filename):
-    try:
-        return pd.read_csv(filename)
-    except:
-        logging.error(f"Cannot find {filename}")
-        st.error(f"Failed to load {filename}")
-        
-        
+       
 
 ############### Create variables to load datafiles as dataframes ###############
 
 # Import csv data files for - U.S. Mainland, Puerto Rico, U.S. Virgin Islands
-mainland = load_data("../Resources/data_files/mainland_data.csv")
-puerto_rico = load_data("../Resources/data_files/puerto_rico_data.csv")
-virgin_islands = load_data("../Resources/data_files/virgin_islands_data.csv")
+mainland = pd.read_csv("../Resources/data_files/mainland_data.csv")
+puerto_rico = pd.read_csv("../Resources/data_files/puerto_rico_data.csv")
+virgin_islands = pd.read_csv("../Resources/data_files/virgin_islands_data.csv")
 
 # st.write(mainland["state"].unique())
 
